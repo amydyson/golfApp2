@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>H1:</strong>
+  <%= @score.h1 %>
+</p>
+
+<p>
+  <strong>H2:</strong>
+  <%= @score.h2 %>
+</p>
+
+<p>
+  <strong>H17:</strong>
+  <%= @score.h17 %>
+</p>
+
+<p>
+  <strong>H18:</strong>
+  <%= @score.h18 %>
+</p>
+
+<p>
+  <strong>Golfer:</strong>
+  <%= @score.golfer %>
+</p>
+
+<p>
+  <strong>Tournament:</strong>
+  <%= @score.tournament %>
+</p>
+
+<%= link_to 'Edit', edit_score_path(@score) %> |
+<%= link_to 'Back', scores_path %>

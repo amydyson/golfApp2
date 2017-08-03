@@ -1,0 +1,47 @@
+<%= form_with(model: score, local: true) do |form| %>
+  <% if score.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(score.errors.count, "error") %> prohibited this score from being saved:</h2>
+
+      <ul>
+      <% score.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :h1 %>
+    <%= form.number_field :h1, id: :score_h1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h2 %>
+    <%= form.number_field :h2, id: :score_h2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h17 %>
+    <%= form.number_field :h17, id: :score_h17 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h18 %>
+    <%= form.number_field :h18, id: :score_h18 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :golfer_id %>
+    <%= form.text_field :golfer_id, id: :score_golfer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tournament_id %>
+    <%= form.text_field :tournament_id, id: :score_tournament_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
